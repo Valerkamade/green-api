@@ -1,0 +1,43 @@
+.column {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+}
+
+.column__first {
+  height: 100vh;
+}
+
+.column__second {
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+}
+
+/* export const defaultTheme = {
+  colorBlackForText: "#333333",
+  colorWhite: "#ffffff",
+  colorGray: "#f6f6f6",
+  colorForLightBackground: "#fff6d9",
+  colorForDarkBackground: "#ffeead",
+  colorForNewIcon: "#ffb334",
+  colorForSoftIcon: "#7fc92e",
+  colorForButton: "#ff732B",
+  colorForButtonHover: "#F35714",
+  pagePadding: "90px",
+  indent: "20px",
+  fontFamily: '"Inter", "Arial", sans-serif',
+  fontSizeDefault: "18px",
+  footerHeight: "80px",
+  pageWidth: "1280px"
+}; */
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  max-height: 87vh;
+  flex-direction: column;
+}

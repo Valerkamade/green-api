@@ -1,0 +1,15 @@
+.navigation__button {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  box-sizing: content-box;
+}
+
+.navigation__icon {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--color-text-main);
+}
