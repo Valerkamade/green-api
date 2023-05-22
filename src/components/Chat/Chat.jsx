@@ -1,29 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import Message from '../Message/Message';
-import styled from 'styled-components';
 import Form from '../Form/Form';
 import { formSendMessage } from '../../utils/data-list';
 import Input from '../Input/Input';
 import Main from '../Main/Main';
-
-// const MainChat = styled.main`
-//   height: auto;
-// `;
-
-// const FormMessage = styled(Form)`
-//   background-color: red;
-//   display: flex;
-//   width: 100%;
-// `
-// const ChatList = styled.ul`
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
-//   overflow-y: scroll;
-//   height: 85vh;
-//   flex-direction: column;
-//   /* justify-content: flex-end; */
-// `;
+import { ChatItem, ChatList } from './styles';
 
 export default function Chat({
   messages,
@@ -45,11 +26,11 @@ export default function Chat({
 
   return (
     <Main>
-      <ul ref={chatRef}>
+      <ChatList ref={chatRef}>
         {messages.map((message) => (
           <Message key={message.idMessage} message={message} />
         ))}
-      </ul>
+      </ChatList>
 
       <Form isOpen={true} name={nameForm} buttonText='' onSubmit={handleSubmit}>
         {inputs.map((input) => (

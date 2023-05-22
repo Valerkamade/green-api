@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import Avatar from '../Avatar/Avatar';
-import { ContactItem, ContactName } from './styled';
+import { ContactItem, ContactName } from './styles';
 // import * as app from '../../utils/api';
 // import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 

@@ -1,19 +1,15 @@
 import React from 'react';
-import './Icon.css';
+import { Li } from '../styled';
+// import './Icon.css';
 import { ReactComponent as Group } from '../../assets/group-icon.svg';
 import { ReactComponent as Exit } from '../../assets/exit-icon.svg';
 import { ReactComponent as Menu } from '../../assets/menu-icon.svg';
 import { ReactComponent as Status } from '../../assets/status-icon.svg';
 import { ReactComponent as Search } from '../../assets/serch-icon.svg';
 import { ReactComponent as Chat } from '../../assets/new-chat-icon.svg';
-import { ReactComponent as Send} from '../../assets/send-icon.svg'
+import { ReactComponent as Send } from '../../assets/send-icon.svg';
 
-import styled from 'styled-components';
-
-const BlueButton = styled.button`
-  color: var(--color-icon-menu);
-  cursor: pointer;
-`;
+import Button from '../ui/button/button';
 
 export default function Icon({ setIsLogin, button }) {
   const { buttonName, name } = button;
@@ -45,10 +41,9 @@ export default function Icon({ setIsLogin, button }) {
     console.log('send');
   }
 
-
   return (
-    <li className='navigation__item'>
-      <BlueButton
+    <Li>
+      <Button
         className='navigation__button'
         aria-label={buttonName}
         type='button'
@@ -67,13 +62,13 @@ export default function Icon({ setIsLogin, button }) {
               return <Search onClick={handleSearch} />;
             case 'newChat':
               return <Chat onClick={handleNewChat} />;
-              case 'send':
+            case 'send':
               return <Send onClick={handleSendMessage} />;
             default:
               return null;
           }
         })()}
-      </BlueButton>
-    </li>
+      </Button>
+    </Li>
   );
 }

@@ -19,7 +19,7 @@ code {
   box-sizing: border-box;
 }
 
-.page {
+/* .page {
   width: 100%;
   min-height: 100%;
   background-color: var(--color-bg);
@@ -39,7 +39,7 @@ code {
   position: absolute;
   left: 0;
   top: 0;
-}
+} */
 
 .column__first .profile__name {
   display: none;

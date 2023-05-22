@@ -14,12 +14,13 @@ export const GlobalStyle = createGlobalStyle`
   body {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     font-family: ${(props) => props.theme.fontFamily};
     font-size: ${(props) => props.theme.fontSizeDefault};
     line-height: 17px;
     font-weight: 400;
     color: ${(props) => props.theme.colorWhiteForText};
+    background-color: ${(props) => props.theme.colorForDarkBackground};
   }
 `;
 

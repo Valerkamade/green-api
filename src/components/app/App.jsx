@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-// import { GlobalStyle } from "./styles";
+
+import { GlobalStyle } from './styles';
 import Header from '../Header/Header';
 import Login from '../Login/Login';
 import Main from '../Main/Main';
@@ -141,36 +142,38 @@ function App() {
   }
 
   return (
-    <CurrentUserContext.Provider value={authUser}>
-      <CurrentChatContext.Provider value={currentChat}>
-        {!isLogin ? (
-          <Login
-            onLogin={handleLogin}
-            value={value}
-            handleChange={handleChange}
-          />
-        ) : (
-          <div className='column'>
-            <div className='column__first'>
-              <Header contacts={contacts} buttonList={headerContactButtons} />
-              <Main value={value} handleChange={handleChange}>
-                <ul>
-                  {messages
-                    // .filter((message, i, messages) => message === messages.find(m => m.senderId === message.senderId))
-                    // reduce((acc, n) => (acc[n.senderId] = n, acc), {})
-                    .map((message) => (
-                      // console.log(message)
-                      <Contact
-                        message={message.textMessage}
-                        key={message.idMessage}
-                        name={message.chat.name}
-                        chatId={message.chatId}
-                        onOpenChat={onOpenChat}
-                        setCurrentChate={setCurrentChate}
-                        // type={contact.type}
-                      />
-                    ))}
-                  {/* {contacts.map((contact) => (
+    <>
+      <GlobalStyle />
+      <CurrentUserContext.Provider value={authUser}>
+        <CurrentChatContext.Provider value={currentChat}>
+          {!isLogin ? (
+            <Login
+              onLogin={handleLogin}
+              value={value}
+              handleChange={handleChange}
+            />
+          ) : (
+            <div className='column'>
+              <div className='column__first'>
+                <Header contacts={contacts} buttonList={headerContactButtons} />
+                <Main value={value} handleChange={handleChange}>
+                  <ul>
+                    {messages
+                      // .filter((message, i, messages) => message === messages.find(m => m.senderId === message.senderId))
+                      // reduce((acc, n) => (acc[n.senderId] = n, acc), {})
+                      .map((message) => (
+                        // console.log(message)
+                        <Contact
+                          message={message.textMessage}
+                          key={message.idMessage}
+                          name={message.chat.name}
+                          chatId={message.chatId}
+                          onOpenChat={onOpenChat}
+                          setCurrentChate={setCurrentChate}
+                          // type={contact.type}
+                        />
+                      ))}
+                    {/* {contacts.map((contact) => (
                 <Contact
                   // message={message}
                   key={contact.id}
@@ -180,32 +183,33 @@ function App() {
                   onOpenChat={onOpenChat}
                 />
               ))} */}
-                </ul>
-              </Main>
+                  </ul>
+                </Main>
+              </div>
+              <div className='column__second'>
+                <Header
+                  setIsLogin={setIsLogin}
+                  currentIdChat={currentIdChat}
+                  buttonList={headerChatButtons}
+                />
+                <Main>
+                  {currentIdChat && (
+                    <Chat
+                      messages={messagesCurrentChat}
+                      value={value}
+                      handleChange={handleChange}
+                      onSendMessage={handleSendMessage}
+                      errorMessage={''}
+                      chatId={currentIdChat}
+                    />
+                  )}
+                </Main>
+              </div>
             </div>
-            <div className='column__second'>
-              <Header
-                setIsLogin={setIsLogin}
-                currentIdChat={currentIdChat}
-                buttonList={headerChatButtons}
-              />
-              <Main>
-                {currentIdChat && (
-                  <Chat
-                    messages={messagesCurrentChat}
-                    value={value}
-                    handleChange={handleChange}
-                    onSendMessage={handleSendMessage}
-                    errorMessage={''}
-                    chatId={currentIdChat}
-                  />
-                )}
-              </Main>
-            </div>
-          </div>
-        )}
-      </CurrentChatContext.Provider>
-    </CurrentUserContext.Provider>
+          )}
+        </CurrentChatContext.Provider>
+      </CurrentUserContext.Provider>
+    </>
   );
 }
 

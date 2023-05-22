@@ -27,6 +27,7 @@ const Ul = styled.ul`
   margin: 0;
   padding: 0;
   ${(props) => (props.$isGridList ? gridList : "")}
+  height: 100%;
 `;
 
 export default Ul;

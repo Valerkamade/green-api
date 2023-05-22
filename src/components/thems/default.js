@@ -3,7 +3,7 @@ export const defaultTheme = {
   colorWhite: "#ffffff",
   colorGray: "#f6f6f6",
   colorForLightBackground: "#202c33",//
-  colorForDarkBackground: "#ffeead",
+  colorForDarkBackground: "#0b141a",
   colorForNewIcon: "#ffb334",
   colorForSoftIcon: "#7fc92e",
   colorForButton: "#aebac1",
