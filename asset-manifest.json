@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.de1df705.css",
-    "main.js": "/static/js/main.2534ba3b.js",
-    "static/js/787.5c472d1d.chunk.js": "/static/js/787.5c472d1d.chunk.js",
+    "main.css": "/static/css/main.f9bd6d7f.css",
+    "main.js": "/static/js/main.2c58a7b2.js",
     "static/media/SegoeUI-Bold.woff": "/static/media/SegoeUI-Bold.690474612e4b3b5c70af.woff",
     "static/media/SegoeUI.woff": "/static/media/SegoeUI.40dea9899e829bfb595a.woff",
     "static/media/SegoeUI-Bold.woff2": "/static/media/SegoeUI-Bold.0ac1a7667d928aac19d9.woff2",
@@ -16,12 +15,11 @@
     "static/media/new-chat-icon.svg": "/static/media/new-chat-icon.1821b7c5c9efaf2d8512a20716c272ef.svg",
     "static/media/serch-icon.svg": "/static/media/serch-icon.15cab7a73135d6364ed1de74a2751ade.svg",
     "static/media/send-icon.svg": "/static/media/send-icon.541adde56053b6236cd2b3919999e10a.svg",
-    "main.de1df705.css.map": "/static/css/main.de1df705.css.map",
-    "main.2534ba3b.js.map": "/static/js/main.2534ba3b.js.map",
-    "787.5c472d1d.chunk.js.map": "/static/js/787.5c472d1d.chunk.js.map"
+    "main.f9bd6d7f.css.map": "/static/css/main.f9bd6d7f.css.map",
+    "main.2c58a7b2.js.map": "/static/js/main.2c58a7b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.de1df705.css",
-    "static/js/main.2534ba3b.js"
+    "static/css/main.f9bd6d7f.css",
+    "static/js/main.2c58a7b2.js"
   ]
 }
